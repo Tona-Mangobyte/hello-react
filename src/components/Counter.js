@@ -7,7 +7,9 @@ class Counter extends LifecycleLoggerComponent {
     }
 
     render() {
-        return <h3>{this.props.count}</h3>;
+        return (
+            <h3>{this.props.count}</h3>
+        );
     }
 }
 
