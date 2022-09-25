@@ -1,3 +1,4 @@
+import React from "react";
 import { LifecycleLoggerComponent } from './LifecycleLoggerComponent'
 import {Counter} from "./Counter";
 
@@ -29,14 +30,15 @@ class TextAreaCounter extends LifecycleLoggerComponent {
 
     render() {
         const text = 'text' in this.state ? this.state.text : this.props.text;
+        let counter = null;
+        if (text.length > 0) {
+            counter = <Counter count={text.length} />;
+        }
         return (
             <div>
                 <textarea value={text}
                           onChange={event => this.onTextChange(event)} />
-                {text.length > 0
-                    ? <Counter count={text.length} />
-                    : null
-                }
+                { counter }
             </div>
         );
     }

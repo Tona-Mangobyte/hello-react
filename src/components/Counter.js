@@ -1,3 +1,4 @@
+import React from "react";
 import { LifecycleLoggerComponent } from './LifecycleLoggerComponent'
 
 class Counter extends LifecycleLoggerComponent {
