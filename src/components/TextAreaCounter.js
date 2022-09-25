@@ -1,18 +1,32 @@
-import React  from 'react'
+import React from 'react'
 
 class TextAreaCounter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            // text: 'Simple'
+        }
+    }
+    onTextChange(event) {
+        this.setState({
+            text: event.target.value,
+        });
+    }
+
     render() {
-        const text = this.props.text;
+        const text = 'text' in this.state ? this.state.text : this.props.text;
         return (
             <div>
-                <textarea defaultValue={text}/>
+                <textarea value={text}
+                          onChange={event => this.onTextChange(event)} />
                 <h3>{text.length}</h3>
             </div>
         );
     }
 }
+
 TextAreaCounter.defaultProps = {
-    text: 'Count me as I type',
-};
+    text: 'Simple'
+}
 
 export { TextAreaCounter }

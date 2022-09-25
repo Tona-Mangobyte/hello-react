@@ -6,3 +6,7 @@ export class MyComponent extends React.Component {
         return <div><h3>Hello, { this.props.name }</h3></div>
     }
 }
+
+MyComponent.defaultProps = {
+    text: 'Count me as I type',
+};
