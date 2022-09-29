@@ -2,6 +2,7 @@ import './App.css';
 import { MyComponent } from './components/MyComponent';
 import { TextAreaCounter } from './components/TextAreaCounter';
 import {BookComponent} from "./components/BookComponent";
+import { CounterActionComponent } from './components/CounterActionComponent';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <MyComponent name="Tona@mb" />
         <TextAreaCounter text="Admin" length={7}/>
         <TextAreaCounter />
+        <CounterActionComponent />
         <BookComponent />
       </header>
     </div>
