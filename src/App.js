@@ -10,7 +10,6 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        {/*<MyComponent name="ReactJs" />*/}
         <MyComponent name="Tona@mb" />
         <TextAreaCounter text="Admin" length={7}/>
         <TextAreaCounter />
